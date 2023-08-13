@@ -49,8 +49,16 @@ while True:
 # Write the code that:
 # 1. Prompts the user to enter a dog's age like this:
 #      Input a dog's age: 
+dog_years = 0
+age = input("Input a dog's age: ").lower()
 # 2. Calculates the equivalent dog years, where:
 #      - The first two years count as 10 years each
+if int(age) < 3:
+   dog_years = int(age) * 10
+else:
+   dog_years = 20 + (int(age)-2)*7
+print(f"The dog's age in dog years is {dog_years}")
+   
 #      - Any remaining years count as 7 years each
 # 3. Prints the answer in the following format:
 #      The dog's age in dog years is xx
