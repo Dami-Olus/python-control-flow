@@ -114,6 +114,15 @@ print(f"A triangle with sides of {a}, {b}, & {c} is a {triangle_type} triangle")
 #      term: 5 / number: 5
 #      etc.
 
+prev_term = 0
+curr_term = 1
+print(f"term: 0 / number: {prev_term}")
+for term in range(1, 50):
+    print(f"term: {term} / number: {curr_term}")
+    next_term = prev_term + curr_term
+    prev_term = curr_term
+    curr_term = next_term
+
 # Hints:
 # The next number is found by adding the two numbers before it
 # Use a while loop with a looping variable, or look into Python ranges, e.g.:
