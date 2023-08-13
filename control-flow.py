@@ -26,13 +26,13 @@ else:
 # Write the code that:
 # 1. Prompts the user to enter a phrase:
 #      Please enter a word or phrase: 
-phrase = input('Please enter a word or phrase:').lower()
+
 while True:
-   if phrase == 'quit':
+  phrase = input('Please enter a word or phrase:').lower()
+  if phrase.lower() == 'quit':
     break
-   else:
-    print(f'What you entered is {len(phrase)} characters long')
-    continue
+  print(f'What you entered is {len(phrase)} characters long')
+   
 
     
   
