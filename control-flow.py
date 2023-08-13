@@ -137,15 +137,40 @@ for term in range(1, 50):
 # Write the code that:
 # 1. Prompts the user to enter the month (as three characters):
 #      Enter the month of the year (Jan - Dec):
+input_month = input("Enter the month of the year (Jan - Dec): ")
+input_month = input_month.lower()
 # 2. Then prompts the user to enter the day of the month: 
 #      Enter the day of the month:
+input_day = int(input("Enter the day of the month: "))
 # 3. Calculate what season it is based upon this chart:
 #      Dec 21 - Mar 19: Winter
 #      Mar 20 - Jun 20: Spring
 #      Jun 21 - Sep 21: Summer
 #      Sep 22 - Dec 20: Fall
+if input_month in ('dec', 'jan', 'feb') or (input_month == 'mar' and input_day <= 19):
+    season = 'Winter'
+elif input_month in ('mar', 'apr', 'may') or (input_month == 'jun' and input_day <= 20):
+    season = 'Spring'
+elif input_month in ('jun', 'jul', 'aug') or (input_month == 'sep' and input_day <= 21):
+    season = 'Summer'
+else:
+    season = 'Fall'
 # 4. Print the result as follows:
 #      <Mmm> <dd> is in <season> 
+print(f"{input_month.capitalize()} {input_day} is in {season}")
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # Hints:
 # Consider using the in operator to check if a string is in a particular list/tuple like this:
